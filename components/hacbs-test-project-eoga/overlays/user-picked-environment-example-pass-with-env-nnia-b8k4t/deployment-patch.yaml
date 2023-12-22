@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: hacbs-test-project-eoga
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: var_name
+          value: test
+        image: quay.io/redhat-appstudio-qe/nbe-e2e-thhf-tenant/integ-app-qgrm/hacbs-test-project-eoga@sha256:478ecf3d4b19ba2a13fc0b555e192d97cfb3a03d55531c5e824f9cb13360ec17
+        name: hacbs-jvm-build-test-project
+        resources: {}
+status: {}
